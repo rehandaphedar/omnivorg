@@ -80,7 +80,7 @@ func getConfigDirectory() string {
 		log.Fatalf("Error finding config directory: %v \n", err)
 	}
 
-	configDirectory := filepath.Join(configRoot, "omnivore-org-roam")
+	configDirectory := filepath.Join(configRoot, "omnivorg")
 
 	err = os.MkdirAll(configDirectory, os.ModePerm)
 	if err != nil {
