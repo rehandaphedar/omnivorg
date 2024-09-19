@@ -62,6 +62,8 @@ Make sure the [Emacs Server](https://www.gnu.org/software/emacs/manual/html_node
 omnivorg
 ```
 
+You can use utilities like `cron`, startup scripts in window managers, etc. to automate fetching updates.
+
 # Limitations
 
 I made this mainly for personal use. I only need the url, title, highlights, and annotations. I also do not need a full fledged template configuration. As such, this program only supports a basic template for now.
