@@ -1,0 +1,27 @@
+query getUpdates($since: Date!, $after: String!) {
+	updatesSince(
+		sort: { by: UPDATED_TIME, order: DESCENDING }
+		since: $since
+		after: $after
+	) {
+		... on UpdatesSinceSuccess {
+			edges {
+				node {
+					url
+					title
+					highlights {
+						quote
+						annotation
+					}
+				}
+			}
+			pageInfo {
+				hasNextPage
+				endCursor
+			}
+		}
+		... on UpdatesSinceError {
+			errorCodes
+		}
+	}
+}
